@@ -10,4 +10,8 @@
 /game/*.user
 /game/*.userprefs
 /game/*.pidb
+<<<<<<< HEAD
 /game/*.booproj
+=======
+/game/*.booproj
+>>>>>>> 1a561e5849a0a0fa83f141f1a484b2c426233654
