@@ -9,7 +9,7 @@ var jumpHeight: int = 5;
 // var spawn:GameObject;
 
 function OnTriggerEnter (other : Collider) {
-	Debug.Log("You have died");
+	Debug.Log("You have picked something up");
 	Destroy(other.gameObject);
 }
 
@@ -22,6 +22,11 @@ function Update () {
 }
 
 function OnCollisionEnter2D (other : Collision2D) {
+	// Don't die on contact with ceiling or powerups
+	// using the "no kill" tag
+	if (other.gameObject.tag =="no kill") {
+		return true;
+	};
 	// transform.position.x = spawn.transform.position.x;
 	// transform.position.y = spawn.transform.position.y;
 	transform.position.x =	-98.52702;
@@ -53,8 +58,9 @@ function FixedUpdate () {
 	// };
 
 	if (Input.GetAxis("Vertical") > 0) {
-			rigidbody2D.velocity.y = jumpHeight;
-		};
+			// rigidbody2D.velocity.y = jumpHeight;
+		rigidbody2D.AddRelativeForce(Vector3.up * 20);	
+	};
 
 	// CHECK AND SEE IF USER IS HITING BUTTON/CONTROLLER
 	// if (Input.GetAxis("Vertical")){
