@@ -1,6 +1,7 @@
-﻿#pragma strict
-
 #pragma strict
+
+// to ask:  Make board dark and use light
+//  animate sub up and down on keydown
 
 // GLOBAL VARIABLE
 var walkSpeed: int = 5;
