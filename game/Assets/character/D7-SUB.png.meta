@@ -1,9 +1,17 @@
 fileFormatVersion: 2
-guid: c4e31d5dd7175451bb248ed3f7f705df
+guid: 0dcc9f3e51a454f37afcea285d9d9150
 TextureImporter:
   fileIDToRecycleName:
-    21300000: D7_Sub_Final
+    21300000: D7Sub_FINAL
     21300002: D7-SUB
+    21300004: D7-SUB
+    21300006: D7-SUB_1
+    21300008: D7-SUB_2
+    21300010: D7-SUB_3
+    21300012: D7-SUB_4
+    21300014: D7-SUB_5
+    21300016: D7-SUB_6
+    21300018: D7-SUB_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -23,7 +31,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
@@ -33,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +52,86 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: D7-SUB
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_5
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_6
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: D7-SUB_7
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 9
+        width: 720
+        height: 470
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

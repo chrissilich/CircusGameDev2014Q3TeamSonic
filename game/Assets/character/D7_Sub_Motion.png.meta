@@ -1,12 +1,8 @@
 fileFormatVersion: 2
-guid: a4b7c8cc6d6414759b8f4f3747483175
+guid: f5295c52726454a2f9a11feb44401e96
 TextureImporter:
   fileIDToRecycleName:
     21300000: D7_Sub_Motion
-    21300002: D7_Sub_Motion_0
-    21300004: D7_Sub_Motion_1
-    21300006: D7_Sub_Motion_2
-    21300008: D7_Sub_Motion_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,17 +22,17 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -47,46 +43,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: D7_Sub_Motion_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5
-        width: 640
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: D7_Sub_Motion_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 5
-        width: 640
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: D7_Sub_Motion_2
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 5
-        width: 640
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: D7_Sub_Motion_3
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 5
-        width: 640
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
