@@ -1,0 +1,92 @@
+fileFormatVersion: 2
+guid: 74e70aa9336904a7ba9d59e00ace989c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: creature-5x
+    21300002: c-down-4
+    21300004: c-up-3
+    21300006: c-down-2x
+    21300008: c-down-1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: c-down-4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 745
+        height: 538
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: c-up-3
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1
+        width: 745
+        height: 538
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: c-down-2x
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 1
+        width: 745
+        height: 538
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: c-down-1
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 1
+        width: 745
+        height: 538
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
