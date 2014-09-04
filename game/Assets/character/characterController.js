@@ -56,7 +56,7 @@ function FixedUpdate () {
 	transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
 	
 	// adjust the light's position.y relative to the sub's velocity.y 	
-		spotlight.transform.position.y = 0;//= YVel * .001;
+		// spotlight.transform.position.y = 0;//= YVel * .001;
 		
 //	var LVel = spotlight.position.y;
 //	var target2 = Quaternion.Euler (0, 0, YVel * 1.5);
