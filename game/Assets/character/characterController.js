@@ -22,6 +22,13 @@ function Update () {
 
 }
 
+function DeathByTrigger() {
+	Debug.Log("die by trigger enemy");
+
+	transform.position.x = spawn.transform.position.x;
+	transform.position.y = spawn.transform.position.y;
+}
+
 function OnCollisionEnter2D (other : Collision2D) {
 	// Don't die on contact with ceiling or powerups
 	// using the "no kill" tag
@@ -57,6 +64,7 @@ function FixedUpdate () {
 	
 	// adjust the light's position.y relative to the sub's velocity.y 	
 		// spotlight.transform.position.y = 0;//= YVel * .001;
+		// spotlight.transform.position.x = 0;
 		
 //	var LVel = spotlight.position.y;
 //	var target2 = Quaternion.Euler (0, 0, YVel * 1.5);

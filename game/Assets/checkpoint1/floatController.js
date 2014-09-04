@@ -21,6 +21,18 @@ var verticalDistance : float = 1.0;
 var horizontalSpeed : float = 1.0;
 var spinSpeed : float = 1.0;
 
+
+function OnTriggerEnter2D (other : Collider2D) {
+	//var cc:characterController = GameObject.Find("SUB-D7").GetComponent("characterController");
+	//Debug.Log(cc);
+	//cc.
+	if (other.gameObject.tag == "Player") {
+		Debug.Log(other.gameObject);
+		other.gameObject.SendMessage("DeathByTrigger");
+	}
+}
+
+
 function Start () {		//Only executes when the program starts
     xMovement = Random.Range(-.5,.5)*horizontalSpeed;   //random value between -0.5 and 0.5, causing some movement on the x axis.
     xtorque = Random.Range(-5.0,5.0)*spinSpeed;	//turns the object on the x axis
