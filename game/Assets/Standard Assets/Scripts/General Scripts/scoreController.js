@@ -1,13 +1,11 @@
 ﻿#pragma strict
 
-private var LevelController: LevelController;
 private var startTime: float;
-var textTime: String;
+private var textTime: String;
 
 function Start () {
 
 	startTime = Time.time;
-	LevelController = gameObject.Find("LevelController").GetComponent("LevelController");
 
 }
 

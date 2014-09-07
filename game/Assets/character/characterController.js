@@ -1,8 +1,5 @@
 #pragma strict
 
-// to ask:  Make board dark and use light
-//  animate sub up and down on keydown
-
 // GLOBAL VARIABLE
 var walkSpeed: int = 7;
 var jumpHeight: int = 5;
@@ -10,11 +7,6 @@ var spawn: GameObject;
 var spotlight: GameObject;
 private var paused: boolean;
 private var speedy: boolean;
-
-function OnTriggerEnter (other : Collider) {
-	Debug.Log("You have picked something up");
-	Destroy(other.gameObject);
-}
 
 function Start () {
 
@@ -24,7 +16,7 @@ function Start () {
 
 function Update () {
 
-	// PAUSE CONTROLS
+	// SPACEBAR CONTROL - PAUSE
 	if (Input.GetKeyUp(KeyCode.Space)) {
 
 		paused = !paused;
@@ -39,9 +31,15 @@ function Update () {
 
 	}
 
-	// ARROW CONTROLS
+	// ARROW CONTROLS - FORWARD AND BACK
 	if (Input.GetKeyDown(KeyCode.RightArrow)) {
 		walkSpeed = 20;
+		if (Input.GetAxis("Vertical") > 0) {
+			rigidbody2D.AddRelativeForce(Vector3.up * 100);	
+			if (rigidbody2D.velocity.y < -5) {
+				rigidbody2D.AddRelativeForce(Vector3.up * 150);	
+			}
+		};
 	}
 
 	if (Input.GetKeyUp(KeyCode.RightArrow)) {
@@ -56,9 +54,15 @@ function Update () {
 		walkSpeed = 7;
 	}
 
-	// S + D CONTROLS
+	// S + D CONTROLS - FORWARD AND BACK
 	if (Input.GetKeyDown(KeyCode.D)) {
 		walkSpeed = 20;
+		if (Input.GetAxis("Vertical") > 0) {
+			rigidbody2D.AddRelativeForce(Vector3.up * 100);		
+			if (rigidbody2D.velocity.y < -5) {
+				rigidbody2D.AddRelativeForce(Vector3.up * 150);	
+			}
+		};
 	}
 
 	if (Input.GetKeyUp(KeyCode.D)) {
@@ -77,10 +81,10 @@ function Update () {
 
 function DeathByTrigger() {
 
-	Debug.Log("die by trigger enemy");
-
 	transform.position.x = spawn.transform.position.x;
 	transform.position.y = spawn.transform.position.y;
+
+	Application.LoadLevel("descent-7"); 
 
 }
 
@@ -92,7 +96,8 @@ function OnCollisionEnter2D (other : Collision2D) {
 	};
 	transform.position.x = spawn.transform.position.x;
 	transform.position.y = spawn.transform.position.y;
-	Debug.Log("DIE");
+
+	Application.LoadLevel("descent-7"); 
 
 }
 
