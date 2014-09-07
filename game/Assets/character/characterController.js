@@ -4,11 +4,12 @@
 //  animate sub up and down on keydown
 
 // GLOBAL VARIABLE
-var walkSpeed: int = 5;
+var walkSpeed: int = 7;
 var jumpHeight: int = 5;
 var spawn:GameObject;
 var spotlight:GameObject;
 var paused: boolean;
+var speedy: boolean;
 
 function OnTriggerEnter (other : Collider) {
 	Debug.Log("You have picked something up");
@@ -20,22 +21,58 @@ function Start () {
 }
 
 function Update () {
+
+	// PAUSE CONTROLS
 	if (Input.GetKeyUp(KeyCode.Space)) {
-		 
-			paused = !paused;
 
-			if (paused === true) {
-				Time.timeScale = 0;
-				audio.Pause();
+		paused = !paused;
+
+		if (paused === true) {
+			Time.timeScale = 0;
+			audio.Pause();
 
 
-			} else {
-				Time.timeScale = 1;
-				audio.Play();
-				
-			}
+		} else {
+			Time.timeScale = 1;
+			audio.Play();
+			
+		}
 
-	  }
+	}
+
+	// ARROW CONTROLS
+	if (Input.GetKeyDown(KeyCode.RightArrow)) {
+		walkSpeed = 20;
+	}
+
+	if (Input.GetKeyUp(KeyCode.RightArrow)) {
+		walkSpeed = 7;
+	}
+
+	if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+		walkSpeed = 2;
+	}
+
+	if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+		walkSpeed = 7;
+	}
+
+	// S + D CONTROLS
+	if (Input.GetKeyDown(KeyCode.D)) {
+		walkSpeed = 20;
+	}
+
+	if (Input.GetKeyUp(KeyCode.D)) {
+		walkSpeed = 7;
+	}
+
+	if (Input.GetKeyDown(KeyCode.A)) {
+		walkSpeed = 2;
+	}
+
+	if (Input.GetKeyUp(KeyCode.A)) {
+		walkSpeed = 7;
+	}
 
 }
 
