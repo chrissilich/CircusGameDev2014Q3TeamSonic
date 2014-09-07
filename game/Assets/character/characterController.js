@@ -8,6 +8,7 @@ var walkSpeed: int = 5;
 var jumpHeight: int = 5;
 var spawn:GameObject;
 var spotlight:GameObject;
+var paused: boolean;
 
 function OnTriggerEnter (other : Collider) {
 	Debug.Log("You have picked something up");
@@ -19,6 +20,22 @@ function Start () {
 }
 
 function Update () {
+	if (Input.GetKeyUp(KeyCode.Space)) {
+		 
+			paused = !paused;
+
+			if (paused === true) {
+				Time.timeScale = 0;
+				audio.Pause();
+
+
+			} else {
+				Time.timeScale = 1;
+				audio.Play();
+				
+			}
+
+	  }
 
 }
 

@@ -11,6 +11,6 @@
 		if (playButton) {
 			Debug.Log("Clicked");
 
-			Application.LoadLevel("descent-7-alpha");
+			Application.LoadLevel("descent-7");
 		}
 	}
