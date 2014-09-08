@@ -33,6 +33,8 @@ function Update () {
 
 	// ARROW CONTROLS - FORWARD AND BACK
 	if (Input.GetKeyDown(KeyCode.RightArrow)) {
+		spotlight.light.intensity = 1.25;
+		spotlight.light.spotAngle = 50;
 		walkSpeed = 20;
 		if (Input.GetAxis("Vertical") > 0) {
 			rigidbody2D.AddRelativeForce(Vector3.up * 100);	
@@ -43,6 +45,8 @@ function Update () {
 	}
 
 	if (Input.GetKeyUp(KeyCode.RightArrow)) {
+		spotlight.light.intensity = 3;
+		spotlight.light.spotAngle = 65;
 		walkSpeed = 7;
 	}
 
@@ -56,6 +60,8 @@ function Update () {
 
 	// S + D CONTROLS - FORWARD AND BACK
 	if (Input.GetKeyDown(KeyCode.D)) {
+		spotlight.light.intensity = 1.25;
+		spotlight.light.spotAngle = 50;
 		walkSpeed = 20;
 		if (Input.GetAxis("Vertical") > 0) {
 			rigidbody2D.AddRelativeForce(Vector3.up * 100);		
@@ -66,6 +72,8 @@ function Update () {
 	}
 
 	if (Input.GetKeyUp(KeyCode.D)) {
+		spotlight.light.intensity = 3;
+		spotlight.light.spotAngle = 65;
 		walkSpeed = 7;
 	}
 
