@@ -6,12 +6,15 @@ var jumpHeight: int = 5;
 var spawn: GameObject;
 var spotlight: GameObject;
 var sub: GameObject;
+var fadeToBlack: GameObject;
 private var paused: boolean;
 private var speedy: boolean;
+private var sceneEnding: boolean;
 
 function Start () {
 
 	spotlight = GameObject.Find("Spotlight");
+	fadeToBlack = GameObject.Find("fadeToBlack");
 
 }
 
@@ -100,7 +103,8 @@ function DeathByTrigger() {
 	spotlight.light.intensity = 0;
 
 	if (!rigidbody2D.fixedAngle) {
-		yield WaitForSeconds (1.25);
+		yield WaitForSeconds (.5);
+		fadeToBlack.SendMessage("MakeSceneFadeOut");
 		Application.LoadLevel("descent-7"); 
 	}
 
@@ -111,7 +115,7 @@ function OnCollisionEnter2D (other : Collision2D) {
 	if (other.gameObject.tag == "no kill") {
 
 		// DO NOTHING
-		
+
 	} else {
 
 		walkSpeed = 45;
@@ -121,8 +125,9 @@ function OnCollisionEnter2D (other : Collision2D) {
 		spotlight.light.intensity = 0;
 
 		if (!rigidbody2D.fixedAngle) {
-			yield WaitForSeconds (1.25);
-			Application.LoadLevel("descent-7"); 
+			yield WaitForSeconds (.5); 
+			fadeToBlack.SendMessage("MakeSceneFadeOut");
+			Application.LoadLevel("descent-7");
 		}
 
 	}
@@ -139,7 +144,6 @@ function FixedUpdate () {
 
 	var animationController:Animator = this.GetComponent("Animator");
 
-	
 	var YVel = rigidbody2D.velocity.y;
 	var smooth = 2.0;
 	var target = Quaternion.Euler (0, 0, YVel * 2);
