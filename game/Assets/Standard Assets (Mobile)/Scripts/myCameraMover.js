@@ -13,6 +13,7 @@ public var minY:Number = -1000;
 
 function Start () {
 
+	Time.timeScale = 1;
 	fadeToBlack = GameObject.Find("fadeToBlack");
 
 }
