@@ -5,6 +5,7 @@ private var paused: boolean;
 
 public var subFollow:GameObject;
 public var bossFollow:GameObject;
+public var bulletFollow:GameObject;
 
 public var maxY:Number = 1000;
 public var minY:Number = -1000;
