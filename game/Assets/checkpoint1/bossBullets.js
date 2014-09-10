@@ -18,7 +18,7 @@ private var ytorque : float;    //turns the object on the y axis
 private var ztorque : float;	//turns the object on the z axis
 private var verticalSpeed : float = 1.0;
 private var verticalDistance : float = 1.0;
-var horizontalSpeed : int = 40;
+public var horizontalSpeed : int = 40;
 private var spinSpeed : float = 1.0;
 
 

@@ -5,7 +5,6 @@ private var paused: boolean;
 
 public var subFollow:GameObject;
 public var bossFollow:GameObject;
-public var bulletFollow:GameObject;
 
 public var maxY:Number = 1000;
 public var minY:Number = -1000;
@@ -37,7 +36,7 @@ function Update () {
 	}
 	
 	transform.position.x = subFollow.transform.position.x + 7;
-	bossFollow.transform.position.y = transform.position.y;
+	// bossFollow.transform.position.y = transform.position.y;
 	transform.position.y = subFollow.transform.position.y;
 	
 	if (transform.position.y > maxY) {
