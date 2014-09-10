@@ -14,9 +14,7 @@ function Awake () {
     guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
 }
 
-
 function Update () {
-
 
     // If the scene is starting...
     if(sceneStarting) {
