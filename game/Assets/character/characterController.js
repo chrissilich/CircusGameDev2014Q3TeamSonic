@@ -26,10 +26,10 @@ function Update () {
 		paused = !paused;
 
 		if (paused === true) {
-			Time.timeScale = 0;
+			fadeToBlack.SendMessage("pause1");
 			audio.Pause();
 		} else {
-			Time.timeScale = 1;
+			fadeToBlack.SendMessage("pause2");
 			audio.Play();
 		}
 
