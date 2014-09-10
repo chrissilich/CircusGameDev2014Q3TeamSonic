@@ -7,7 +7,6 @@ var spawn: GameObject;
 var spotlight: GameObject;
 var sub: GameObject;
 var fadeToBlack: GameObject;
-private var paused: boolean;
 private var speedy: boolean;
 private var sceneEnding: boolean;
 
@@ -19,21 +18,6 @@ function Start () {
 }
 
 function Update () {
-
-	// SPACEBAR CONTROL - PAUSE
-	if (Input.GetKeyUp(KeyCode.Space)) {
-
-		paused = !paused;
-
-		if (paused === true) {
-			fadeToBlack.SendMessage("pause1");
-			audio.Pause();
-		} else {
-			fadeToBlack.SendMessage("pause2");
-			audio.Play();
-		}
-
-	}
 
 	// ARROW CONTROLS - FORWARD AND BACK
 	if (Input.GetKeyDown(KeyCode.RightArrow)) {

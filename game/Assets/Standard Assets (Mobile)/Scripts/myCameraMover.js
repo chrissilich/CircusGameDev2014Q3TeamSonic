@@ -1,5 +1,8 @@
 ﻿#pragma strict
 
+var fadeToBlack: GameObject;
+private var paused: boolean;
+
 public var subFollow:GameObject;
 public var bossFollow:GameObject;
 
@@ -10,9 +13,26 @@ public var minY:Number = -1000;
 
 function Start () {
 
+	fadeToBlack = GameObject.Find("fadeToBlack");
+
 }
 
 function Update () {
+
+	// SPACEBAR CONTROL - PAUSE
+	if (Input.GetKeyUp(KeyCode.Space)) {
+
+		paused = !paused;
+
+		if (paused === true) {
+			fadeToBlack.SendMessage("pause1");
+			audio.Pause();
+		} else {
+			fadeToBlack.SendMessage("pause2");
+			audio.Play();
+		}
+
+	}
 	
 	transform.position.x = subFollow.transform.position.x + 7;
 	bossFollow.transform.position.y = transform.position.y;
