@@ -1,10 +1,9 @@
 ﻿#pragma strict
 
-public var fadeSpeed : float = 3.5f;            // Speed that the screen fades to and from black.
-
+public var fadeSpeed : float = 1.5f;            // Speed that the screen fades to and from black.
 
 private var sceneStarting : boolean = true;     // Whether or not the scene is still fading in.
-
+private var sceneEnding : boolean = false;     // Whether or not the scene is still fading out.
 
 function Awake () {
     // Set the texture so that it is the the size of the screen and covers it.
@@ -12,22 +11,32 @@ function Awake () {
 }
 
 
-function Update ()
-{
+function Update () {
     // If the scene is starting...
-    if(sceneStarting)
+    if(sceneStarting) {
         // ... call the StartScene function.
         StartScene();
+    } else if (sceneEnding) {
+    	EndScene();
+    }
 }
 
 
+function MakeSceneFadeOut() {
+
+	sceneEnding = true;
+
+}
+
 function FadeToClear () {
+	//Debug.Log("fade to clear");
     // Lerp the colour of the texture between itself and transparent.
     guiTexture.color = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
 }
 
 
 function FadeToBlack () {
+	//Debug.Log("fade to black");
     // Lerp the colour of the texture between itself and black.
     guiTexture.color = Color.Lerp(guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
 }
@@ -38,7 +47,7 @@ function StartScene () {
     FadeToClear();
     
     // If the texture is almost clear...
-    if(guiTexture.color.a <= 0.05f)
+    if(guiTexture.color.a <= 0.05f) // really close to clear
     {
         // ... set the colour to clear and disable the GUITexture.
         guiTexture.color = Color.clear;
@@ -58,7 +67,9 @@ public function EndScene () {
     FadeToBlack();
     
     // If the screen is almost black...
-    if(guiTexture.color.a >= 0.95f)
-        // ... reload the level.
-        Application.LoadLevel(0);
+    if(guiTexture.color.a >= 0.95f) {
+    	
+    	sceneEnding = false;
+      
+    }
 }
