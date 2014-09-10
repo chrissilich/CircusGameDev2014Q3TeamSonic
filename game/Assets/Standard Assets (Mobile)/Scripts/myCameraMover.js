@@ -15,7 +15,7 @@ function Start () {
 function Update () {
 	
 	transform.position.x = subFollow.transform.position.x + 7;
-	bossFollow.transform.position.y = transform.position.y;
+	// bossFollow.transform.position.y = transform.position.y;
 	transform.position.y = subFollow.transform.position.y;
 	
 	if (transform.position.y > maxY) {
@@ -26,6 +26,6 @@ function Update () {
 	}
 
 	if (subFollow.transform.position.x > 951.288) {
-		bossFollow.transform.position.x = transform.position.x + 15;
+		bossFollow.transform.position.x = transform.position.x + 19.5;
 	}
 }	
