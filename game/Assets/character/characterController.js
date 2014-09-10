@@ -107,28 +107,28 @@ function DeathByTrigger() {
 }
 
 function OnCollisionEnter2D (other : Collision2D) {
-	// Don't die on contact with ceiling or powerups
-	// using the "no kill" tag
-	// if (other.gameObject.tag =="no kill") {
-	// 	return true;
-	// };
-	// transform.position.x = spawn.transform.position.x;
-	// transform.position.y = spawn.transform.position.y;
 
-	// Application.LoadLevel("descent-7"); 
+	if (other.gameObject.tag == "no kill") {
 
-	walkSpeed = 45;
-	rigidbody2D.velocity.y = 45;
-	rigidbody2D.fixedAngle = false;
-	rigidbody2D.mass = 10;
-	spotlight.light.intensity = 0;
+		// DO NOTHING
+		
+	} else {
 
-	if (!rigidbody2D.fixedAngle) {
-		yield WaitForSeconds (1.25);
-		Application.LoadLevel("descent-7"); 
+		walkSpeed = 45;
+		rigidbody2D.velocity.y = 45;
+		rigidbody2D.fixedAngle = false;
+		rigidbody2D.mass = 10;
+		spotlight.light.intensity = 0;
+
+		if (!rigidbody2D.fixedAngle) {
+			yield WaitForSeconds (1.25);
+			Application.LoadLevel("descent-7"); 
+		}
+
 	}
 
 }
+
 
 function FixedUpdate () {
 
