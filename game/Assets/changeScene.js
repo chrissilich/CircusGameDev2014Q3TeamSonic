@@ -17,6 +17,6 @@ static var loadAlevel = 1;
 
 function Start() {
 	Time.timeScale = 1;
-	yield WaitForSeconds(10);
+	yield WaitForSeconds(13.68);
 	Application.LoadLevel("title-screen");
 }
