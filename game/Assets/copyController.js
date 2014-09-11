@@ -1,7 +1,8 @@
 ﻿#pragma strict
 
 function Start () {
-	yield WaitForSeconds(5);
+	yield WaitForSeconds(10);
+	Debug.Log("this happened");
 
 	Application.LoadLevel("title-screen");
 }
