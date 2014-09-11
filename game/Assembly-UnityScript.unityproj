@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\CameraScript.js" />
      <Compile Include="Assets\Floating Script\floating_object.js" />
-     <Compile Include="Assets\SceneFadeInOut.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FadeInAndOutScript.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
@@ -70,6 +69,7 @@
      <Compile Include="Assets\checkpoint1\bossBullets.js" />
      <Compile Include="Assets\checkpoint1\floatController.js" />
      <Compile Include="Assets\copyController.js" />
+     <Compile Include="Assets\screenChange.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
