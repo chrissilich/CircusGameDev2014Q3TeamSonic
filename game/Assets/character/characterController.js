@@ -89,7 +89,7 @@ function DeathByTrigger() {
 	if (!rigidbody2D.fixedAngle) {
 		yield WaitForSeconds (.5);
 		fadeToBlack.SendMessage("MakeSceneFadeOut");
-		Application.LoadLevel("descent-7"); 
+		Application.LoadLevel("title-screen"); 
 	}
 
 }
@@ -111,7 +111,7 @@ function OnCollisionEnter2D (other : Collision2D) {
 		if (!rigidbody2D.fixedAngle) {
 			yield WaitForSeconds (.5); 
 			fadeToBlack.SendMessage("MakeSceneFadeOut");
-			Application.LoadLevel("descent-7");
+			Application.LoadLevel("title-screen");
 		}
 
 	}
