@@ -69,7 +69,6 @@
      <Compile Include="Assets\character\characterController.js" />
      <Compile Include="Assets\checkpoint1\bossBullets.js" />
      <Compile Include="Assets\checkpoint1\floatController.js" />
-     <Compile Include="Assets\screenChange.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
