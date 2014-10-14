@@ -75,6 +75,8 @@ function Update () {
 
 }
 
+var soundFile:AudioClip;
+
 function DeathByTrigger() {
 
 	// transform.position.x = spawn.transform.position.x;
@@ -89,7 +91,10 @@ function DeathByTrigger() {
 	if (!rigidbody2D.fixedAngle) {
 		yield WaitForSeconds (.5);
 		fadeToBlack.SendMessage("MakeSceneFadeOut");
-		Application.LoadLevel("title-screen"); 
+		Application.LoadLevel("title-screen");
+		audio.clip = soundFile;
+		// DEATH SOUND FX
+		audio.Play();
 	}
 
 }
@@ -112,6 +117,9 @@ function OnCollisionEnter2D (other : Collision2D) {
 			yield WaitForSeconds (.5); 
 			fadeToBlack.SendMessage("MakeSceneFadeOut");
 			Application.LoadLevel("title-screen");
+			audio.clip = soundFile;
+			// DEATH SOUND FX
+			audio.Play();
 		}
 
 	}
