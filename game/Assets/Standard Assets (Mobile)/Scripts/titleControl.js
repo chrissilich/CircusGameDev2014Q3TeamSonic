@@ -22,6 +22,7 @@
 
 		if (playButton) {
 			fadeToBlack.SendMessage("MakeSceneFadeOut");
-			Application.LoadLevel("descent-7");
+			// Application.LoadLevel("descent-7");
+			Application.LoadLevel("d7-easy");
 		}
 	}
